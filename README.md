@@ -3,14 +3,12 @@
 Whatsapp Business Sender is the library for sending whatsapp for business message api using node js.
 
 ## **Built With**
----------------
 
 * [Nodejs](https://nodejs.org/en/)
 * [Axios](https://github.com/axios/axios)
 * [Typescript](https://www.typescriptlang.org)
 
 ## **Getting Started**
--------------------
 
 ### Prerequisites
 
@@ -27,7 +25,6 @@ npm install @hyperjump/whatsapp-business-sender
 ```
 
 ## **Libraries**
---------------
 
 ### Exposed Libraries
 ~~~
@@ -41,7 +38,7 @@ npm install @hyperjump/whatsapp-business-sender
 
 **_loginUser_**
 
-  The method to run login-user endpoint in the Whatsapp Business API postman :
+  The method to run login-user endpoint in the Whatsapp Business API :
 
   - baseURL : Whatsapp business api server host
   - creds : Whatsapp business user credentials, consist of username and password
@@ -58,9 +55,9 @@ const resp = await whatsapp.loginUser('<server host>', {
 
 **_checkContacts_**
 
-  The method to run check-contacts endpoint in the Whatsapp Business API postman :
+  The method to run check-contacts endpoint in the Whatsapp Business API :
 
-  - baseURL : to verify access token using JWT-RS256 encryptions
+  - baseURL : Whatsapp business api server host
   - token : token from the user login
   - phones : string arrays of phone number using country code
 
@@ -77,9 +74,9 @@ const resp = await whatsapp.checkContacts('<server host>', '<login token>', [
 
 **_sendMessageTemplateText_**
 
-  The method to run send-message-template-text endpoint in Whatsapp Business API postman :
+  The method to run send-message-template-text endpoint in Whatsapp Business API :
 
-  - baseURL : to verify access token using JWT-RS256 encryptions
+  - baseURL : Whatsapp business api server host
   - token : token from the user login 
   - data : consist of phone number and template configurations
 
@@ -110,7 +107,6 @@ const resp = await whatsapp.sendMessageTemplateText('<server host>', '<login tok
 ```
 
 ## **Versioning**
----------------
 
 v.1.0.0
 

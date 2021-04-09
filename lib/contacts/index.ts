@@ -10,7 +10,7 @@ export const sendCheckContacts = async (
   phones: string[]
 ) => {
   try {
-    const headers = cfg.headers;
+    const headers = {};
     headers["Content-Type"] = "application/json";
     headers["Authorization"] = authorize(cfg.authType, token);
 

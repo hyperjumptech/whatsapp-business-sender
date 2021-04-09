@@ -5,7 +5,7 @@ import { authorize } from "../internal/authorization";
 
 export const login = async (cfg: RequestConfig) => {
   try {
-    const headers = cfg.headers;
+    const headers = {};
     headers["Content-Type"] = "application/json";
     headers["Authorization"] = authorize(cfg.authType, cfg.body);
 

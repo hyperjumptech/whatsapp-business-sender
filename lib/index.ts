@@ -1,11 +1,11 @@
 import { AxiosBasicCredentials } from "axios";
 import { sendCheckContacts } from "./contacts";
 import { RequestConfig } from "./internal/request";
-import { sendMessageTemplateText } from "./messages";
+import { sendMessageTemplate } from "./messages";
 import { Data } from "./messages/interfaces";
 import { login } from "./users";
 
-module.exports = {
+export = {
   loginUser: async (baseURL: string, creds: AxiosBasicCredentials) => {
     const cfg: RequestConfig = {
       name: "login-user",
@@ -45,7 +45,7 @@ module.exports = {
       body: "",
     };
 
-    return sendMessageTemplateText(cfg, token, data)
+    return sendMessageTemplate(cfg, token, data)
       .then((res) => res?.data)
       .catch((err) => err);
   },

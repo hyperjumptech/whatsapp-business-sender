@@ -5,12 +5,12 @@ import { SendMessageTemplateBody } from "./interfaces";
 import { log } from "console";
 import axios from "axios";
 
-export const sendMessageTemplateText = async (
+export const sendMessageTemplate = async (
   cfg: RequestConfig,
   token: string,
   data: Data
 ) => {
-  const headers = cfg.headers;
+  const headers = {};
   headers["Content-Type"] = "application/json";
   headers["Authorization"] = authorize(cfg.authType, token);
 

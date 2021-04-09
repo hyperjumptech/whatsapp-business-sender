@@ -9,17 +9,17 @@ jest.mock("axios", () => ({
           {
             phone: "message_id_eyJhbGc",
             status: "valid",
-            wa_id: "6290873534523"
+            wa_id: "6290873534523",
           },
           {
             phone: "message_id_eyJhbGc",
             status: "valid",
-            wa_id: "6290634643565"
+            wa_id: "6290634643565",
           },
           {
             phone: "message_id_eyJhbGc",
             status: "valid",
-            wa_id: "6294563643634"
+            wa_id: "6294563643634",
           },
         ],
       },
@@ -51,17 +51,17 @@ test("test check contacts", async () => {
         {
           phone: "message_id_eyJhbGc",
           status: "valid",
-          wa_id: "6290873534523"
+          wa_id: "6290873534523",
         },
         {
           phone: "message_id_eyJhbGc",
           status: "valid",
-          wa_id: "6290634643565"
+          wa_id: "6290634643565",
         },
         {
           phone: "message_id_eyJhbGc",
           status: "valid",
-          wa_id: "6294563643634"
+          wa_id: "6294563643634",
         },
       ],
     },

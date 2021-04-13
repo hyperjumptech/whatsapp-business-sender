@@ -1,5 +1,5 @@
 {
-  "name": "whatsapp-business-sender",
+  "name": "@hyperjumptech/whatsapp-business-sender",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",

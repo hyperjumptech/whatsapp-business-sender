@@ -50,4 +50,3 @@ jobs:
         with:
           url: ${{secrets.HYPERJUMP_TEAMS_SYMON_WEBHOOK}}
           body: '{"title": "Whatsapp-business-sender NPM Release", "Text": "Version: ${{steps.package-version.outputs.current-version}}"}'
-      

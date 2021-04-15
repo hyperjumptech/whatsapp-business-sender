@@ -114,8 +114,12 @@ const resp = await whatsapp.sendMessageTemplateText(
 );
 ```
 
-## **Versioning**
+## Discussions
 
-v.1.0.0
+If you need help, want to give feedback, or have a great idea to improve this library, get involved! Let us know in the [Github discussions](https://github.com/hyperjumptech/whatsapp-business-sender/discussions).
 
-initial works
+Please abide by the [Contributor's Code of Conduct](CODE_OF_CONDUCTS.md)
+
+## License
+
+[MIT](./LICENSE.txt) License.

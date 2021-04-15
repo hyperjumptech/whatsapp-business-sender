@@ -36,6 +36,11 @@ jobs:
     needs: publish-npm
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12
+          registry-url: https://registry.npmjs.org/
       - name: Get Package Version
         id: package-version
         uses: martinbeentjes/npm-get-version-action@master

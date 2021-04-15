@@ -20,7 +20,7 @@ Whatsapp Business Sender is the library for sending whatsapp for business messag
 ### Installing
 
 ```bash
-npm install @hyperjump/whatsapp-business-sender
+npm install @hyperjumptech/whatsapp-business-sender
 ```
 
 ## **Libraries**
@@ -45,7 +45,7 @@ The method to run login-user endpoint in the Whatsapp Business API :
 _usage:_
 
 ```js
-import whatsapp from "whatsapp-business-sender";
+import whatsapp from "@hyperjumptech/whatsapp-business-sender";
 
 const resp = await whatsapp.loginUser("<server host>", {
   username: "<whatsapp username>",
@@ -64,7 +64,7 @@ The method to run check-contacts endpoint in the Whatsapp Business API :
 _usage:_
 
 ```js
-import whatsapp from "whatsapp-business-sender";
+import whatsapp from "@hyperjumptech/whatsapp-business-sender";
 
 const resp = await whatsapp.checkContacts("<server host>", "<login token>", [
   "<phone number>",
@@ -84,7 +84,7 @@ The method to run send-message-template-text endpoint in Whatsapp Business API :
 _usage:_
 
 ```js
-import whatsapp from "whatsapp-business-sender";
+import whatsapp from "@hyperjumptech/whatsapp-business-sender";
 
 const resp = await whatsapp.sendMessageTemplateText(
   "<server host>",

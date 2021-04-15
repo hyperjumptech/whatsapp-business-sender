@@ -8,7 +8,7 @@
 - Github action to notify Microsoft Teams.
 - Documentation: Wrong installation command and usage's import.
 
-## [1.0.21 - 2021-04-15
+## [1.0.1] - 2021-04-15
 
 ### Fixed
 

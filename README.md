@@ -1,4 +1,4 @@
-# **whatsapp-business-sender**
+# **Whatsapp Business Sender**
 
 Whatsapp Business Sender is the library for sending whatsapp for business message api using node js.
 
@@ -14,8 +14,6 @@ Whatsapp Business Sender is the library for sending whatsapp for business messag
 
 - Node.js v^14.14.37
 - npm v6.14.11
-- Axios v^0.21.1
-- Typescript v^4.2.4
 
 ### Installing
 
@@ -114,8 +112,12 @@ const resp = await whatsapp.sendMessageTemplateText(
 );
 ```
 
-## **Versioning**
+## Discussions
 
-v.1.0.0
+If you need help, want to give feedback, or have a great idea to improve this library, get involved! Let us know in the [Github discussions](https://github.com/hyperjumptech/whatsapp-business-sender/discussions).
 
-initial works
+Please abide by the [Contributor's Code of Conduct](CODE_OF_CONDUCTS.md)
+
+## License
+
+[MIT](./LICENSE.txt) License.

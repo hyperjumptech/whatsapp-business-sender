@@ -24,13 +24,18 @@
 
 import { AxiosBasicCredentials } from "axios";
 import { sendCheckContacts } from "./contacts";
+import { CheckContactResponse } from "./contacts/interfaces";
 import { RequestConfig } from "./internal/request";
 import { sendMessageTemplate } from "./messages";
-import { Data } from "./messages/interfaces";
+import { Data, SendMessageResponse } from "./messages/interfaces";
 import { login } from "./users";
+import { LoginResponse } from "./users/interfaces";
 
 export = {
-  loginUser: async (baseURL: string, creds: AxiosBasicCredentials) => {
+  loginUser: async (
+    baseURL: string,
+    creds: AxiosBasicCredentials
+  ): Promise<LoginResponse> => {
     const cfg: RequestConfig = {
       name: "login-user",
       path: `${baseURL}/v1/users/login`,
@@ -41,9 +46,15 @@ export = {
 
     return login(cfg)
       .then((res) => res?.data)
-      .catch((err) => err);
+      .catch((err) => {
+        throw new Error(err);
+      });
   },
-  checkContacts: async (baseURL: string, token: string, phones: string[]) => {
+  checkContacts: async (
+    baseURL: string,
+    token: string,
+    phones: string[]
+  ): Promise<CheckContactResponse> => {
     const cfg: RequestConfig = {
       name: "check-contact",
       path: `${baseURL}/v1/contacts`,
@@ -54,13 +65,15 @@ export = {
 
     return sendCheckContacts(cfg, token, phones)
       .then((res) => res?.data)
-      .catch((err) => err);
+      .catch((err) => {
+        throw new Error(err);
+      });
   },
   sendMessageTemplateText: async (
     baseURL: string,
     token: string,
     data: Data
-  ) => {
+  ): Promise<SendMessageResponse> => {
     const cfg: RequestConfig = {
       name: "send-message-template-text",
       path: `${baseURL}/v1/messages`,
@@ -71,6 +84,8 @@ export = {
 
     return sendMessageTemplate(cfg, token, data)
       .then((res) => res?.data)
-      .catch((err) => err);
+      .catch((err) => {
+        throw new Error(err);
+      });
   },
 };

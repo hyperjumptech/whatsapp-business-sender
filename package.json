@@ -7,10 +7,11 @@
     "build"
   ],
   "scripts": {
-    "pretest": "rm -rf ./coverage && npm run check-format",
+    "pretest": "rm -rf ./coverage && npm run lint && npm run check-format",
     "test": "jest --coverage",
-    "format": "prettier --write .",
+    "format": "rm -rf ./coverage && prettier --write .",
     "check-format": "prettier --check .",
+    "lint": "eslint . --ignore-path .gitignore",
     "build": "rm -rf build && tsc",
     "clean": "rm -rf build && rm -rf dist",
     "build-module": "npm run clean && NODE_ENV=production tsc && publish-flat -f build -o dist",
@@ -28,17 +29,25 @@
   },
   "homepage": "https://github.com/hyperjumptech/whatsapp-business-sender#readme",
   "dependencies": {
-    "axios": "^0.21.1"
+    "axios": "^0.21.1",
+    "pino": "^6.11.3",
+    "pino-pretty": "^4.7.1"
   },
   "devDependencies": {
     "@types/axios": "^0.14.0",
     "@types/jest": "^26.0.22",
     "@types/node": "^14.14.37",
+    "@types/pino": "^6.3.7",
     "@types/typescript": "^2.0.0",
+    "@typescript-eslint/eslint-plugin": "^4.22.0",
+    "@typescript-eslint/parser": "^4.22.0",
+    "eslint": "^7.24.0",
+    "eslint-config-prettier": "^8.2.0",
+    "eslint-plugin-prettier": "^3.4.0",
     "jest": "^26.6.3",
     "prettier": "^2.2.1",
-    "ts-jest": "^26.5.4",
     "publish-flat": "^1.4.1",
+    "ts-jest": "^26.5.4",
     "typescript": "^4.2.4"
   }
 }

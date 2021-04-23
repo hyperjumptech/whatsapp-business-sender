@@ -1,6 +1,14 @@
 # Changelog
 
-## [1.0.3] - 2021-04-15
+## [1.0.3] - 2021-04-24
+
+### Fixed
+
+- Change logging to Pino instead of using console log.
+- Add endpoint responses.
+- Add eslint checking.
+
+## [1.0.2] - 2021-04-15
 
 ### Fixed
 
@@ -8,7 +16,7 @@
 - Github action to notify Microsoft Teams.
 - Documentation: Wrong installation command and usage's import.
 
-## [1.0.2] - 2021-04-15
+## [1.0.1] - 2021-04-15
 
 ### Fixed
 

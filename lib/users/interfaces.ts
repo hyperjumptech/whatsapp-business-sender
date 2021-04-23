@@ -26,3 +26,11 @@ export interface User {
   token: string;
   expires_after: string;
 }
+
+export interface LoginResponse {
+  users: User[];
+  meta: {
+    version: string;
+    api_status: string;
+  };
+}

@@ -27,3 +27,17 @@ export interface CheckContactRequestBody {
   contacts: string[];
   force_check: boolean;
 }
+
+export interface Contact {
+  input: string;
+  status: string;
+  wa_id: string;
+}
+
+export interface CheckContactResponse {
+  contacts: Contact[];
+  meta: {
+    api_status: string;
+    version: string;
+  };
+}

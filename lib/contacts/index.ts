@@ -22,17 +22,17 @@
  * SOFTWARE.                                                                      *
  **********************************************************************************/
 
-import axios from "axios";
-import { CheckContactRequestBody } from "./interfaces";
+import axios, { AxiosResponse } from "axios";
+import { CheckContactRequestBody, CheckContactResponse } from "./interfaces";
 import { RequestConfig } from "../internal/request";
 import { authorize } from "../internal/authorization";
-import { log } from "console";
+import logger from "../internal/logger";
 
 export const sendCheckContacts = async (
   cfg: RequestConfig,
   token: string,
   phones: string[]
-) => {
+): Promise<AxiosResponse<CheckContactResponse>> => {
   try {
     const headers = {};
     headers["Content-Type"] = "application/json";
@@ -51,6 +51,6 @@ export const sendCheckContacts = async (
       data: body,
     });
   } catch (error) {
-    log(`Failed when checking contacts: ${error}`);
+    logger.error(`Failed when checking contacts: ${error}`);
   }
 };

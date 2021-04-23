@@ -1,6 +1,6 @@
 {
   "name": "@hyperjumptech/whatsapp-business-sender",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Node.js library to send message through Whatsapp Business API",
   "main": "build/index.js",
   "files": [
@@ -22,7 +22,7 @@
     "url": "git+https://github.com/hyperjumptech/whatsapp-business-sender.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "hyperjumptech",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/hyperjumptech/whatsapp-business-sender/issues"

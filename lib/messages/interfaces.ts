@@ -70,3 +70,15 @@ export interface Data {
   phone: string;
   template: Template;
 }
+
+export interface SendMessageResponse {
+  messages: [
+    {
+      id: string;
+    }
+  ];
+  meta: {
+    api_status: string;
+    version: string;
+  };
+}

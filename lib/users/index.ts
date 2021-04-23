@@ -22,12 +22,15 @@
  * SOFTWARE.                                                                      *
  **********************************************************************************/
 
-import axios from "axios";
-import { log } from "console";
+import axios, { AxiosResponse } from "axios";
 import { RequestConfig } from "../internal/request";
 import { authorize } from "../internal/authorization";
+import { LoginResponse } from "./interfaces";
+import logger from "../internal/logger";
 
-export const login = async (cfg: RequestConfig) => {
+export const login = async (
+  cfg: RequestConfig
+): Promise<AxiosResponse<LoginResponse>> => {
   try {
     const headers = {};
     headers["Content-Type"] = "application/json";
@@ -39,6 +42,6 @@ export const login = async (cfg: RequestConfig) => {
       headers,
     });
   } catch (error) {
-    log(`Failed when try to logged in: ${error}`);
+    logger.error(`Failed when try to logged in: ${error}`);
   }
 };

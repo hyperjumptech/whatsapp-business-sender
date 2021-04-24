@@ -51,6 +51,7 @@ export const sendCheckContacts = async (
       data: body,
     });
   } catch (error) {
-    logger.error(`Failed when checking contacts: ${error}`);
+    logger.error(`Failed checking contacts: ${error}`);
+    throw error;
   }
 };

@@ -58,10 +58,10 @@ export const sendMessageTemplate = async (
       timeout: 30000,
     });
 
-    logger.info(`--- success sending message: ${resp.config.data}`);
+    logger.info(`Success sending message: ${resp.config.data}`);
     return resp;
   } catch (error) {
-    logger.error("--- failed to send message: ", error.message);
-    throw new Error(`failed to send message with error: ${error.message}`);
+    logger.error(`Failed to send message: ${error}`);
+    throw error;
   }
 };

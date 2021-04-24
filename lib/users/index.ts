@@ -42,6 +42,7 @@ export const login = async (
       headers,
     });
   } catch (error) {
-    logger.error(`Failed when try to logged in: ${error}`);
+    logger.error(`Failed logging in: ${error}`);
+    throw error;
   }
 };
